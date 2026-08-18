@@ -52,6 +52,6 @@ do
 
         fi
 
-    echo "Private Ip of $instance machine $IP "
+    echo "Private Ip of  machine : $IP "
 
 done
