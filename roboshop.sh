@@ -8,7 +8,7 @@ AMI_ID="ami-0220d79f3f480ecf5"
 for instance in $@
 
 do
-    INSTANCE_ID=$(aws ec2 describe-instances \
+    INSTANCE_ID=$(aws ec2 run-instances \
       
     --image-id "$AMI_ID" \
 
@@ -23,7 +23,7 @@ do
     --output text )
 
 
-        if [$instance=="frontend"]; then
+        if [ $instance == "frontend" ]; then
 
             IP=$(
 
