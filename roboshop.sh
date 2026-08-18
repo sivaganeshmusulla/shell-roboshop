@@ -52,4 +52,6 @@ do
 
         fi
 
+        echo "Private Ip of $@ machine $IP "
+
 done
