@@ -1,4 +1,4 @@
-#! /bin/bash
+#!/bin/bash
 
 SG_ID="sg-0139ab60908a92954"
 
@@ -23,7 +23,7 @@ do
     --output text )
 
 
-        if [ $instance == "frontend" ]; then
+        if [$instance=="frontend"]; then
 
             IP=$(
 
@@ -52,6 +52,6 @@ do
 
         fi
 
-        echo "Private Ip of $instance machine $IP "
+    echo "Private Ip of $instance machine $IP "
 
 done
