@@ -9,7 +9,7 @@ for instance in $@
 
 do
 
-        instance_id = $(aws ec2 run-instances \
+        INSTANCE_ID= $(aws ec2 run-instances \
 
         --image-id $AMI_ID \
 
@@ -29,7 +29,7 @@ do
 
         aws ec2 describe-instances \
 
-        --instance-ids $instance_id \
+        --instance-ids $INSTANCE_ID \
 
         --query 'Reservations []. Instances [].PublicIpAddress' \
 
@@ -43,7 +43,7 @@ do
 
             aws ec2 describe-instances \
 
-            --instance-ids $instance_id \
+            --instance-ids $INSTANCE_ID \
 
             --query 'Reservations []. Instances [].Private IpAddress' \
 
